@@ -46,4 +46,13 @@ describe('Vector3', function () {
         expect(vector.z).toBeCloseTo(0.802, 3);
       });
 
+  it('should has method multiply and allow multiplication with scalar',
+      function () {
+        var vector = new Vector3(1, 2, 3);
+        expect(typeof vector.multiply).toBe('function');
+        vector.multiply(2);
+        expect(vector.x).toBe(2);
+        expect(vector.y).toBe(4);
+        expect(vector.z).toBe(6);
+      });
 });

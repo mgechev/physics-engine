@@ -26,3 +26,9 @@ Vector3.prototype.normalize = function () {
   this.y /= l;
   this.z /= l;
 };
+
+Vector3.prototype.multiply = function (n) {
+  this.x *= n;
+  this.y *= n;
+  this.z *= n;
+};
