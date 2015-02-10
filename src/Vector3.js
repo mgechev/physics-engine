@@ -36,3 +36,13 @@ Vector3.prototype.multiply = function (n) {
 Vector3.prototype.multiplyCopy = function (n) {
   return new Vector3(this.x * n, this.y * n, this.z * n);
 };
+
+Vector3.prototype.sum = function (v) {
+  this.x += v.x;
+  this.y += v.y;
+  this.z += v.z;
+};
+
+Vector3.prototype.sumCopy = function (v) {
+  return new Vector3(this.x + v.x, this.y + v.y, this.z + v.z);
+};

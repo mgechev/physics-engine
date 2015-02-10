@@ -69,4 +69,31 @@ describe('Vector3', function () {
         expect(vector.y).toBe(2);
         expect(vector.z).toBe(3);
       });
+
+  it('should has method sum, which sums the vector with another one',
+      function () {
+        var vector = new Vector3(1, 2, 3);
+        expect(typeof vector.sum).toBe('function');
+        var v2 = new Vector3(1, 1, 1);
+        vector.sum(v2);
+        expect(vector.x).toBe(2);
+        expect(vector.y).toBe(3);
+        expect(vector.z).toBe(4);
+      });
+
+  it('should has method for sum the current vector ' +
+      'with another vector and return new vector', function () {
+        var vector = new Vector3(1, 2, 3);
+        expect(typeof vector.sumCopy).toBe('function');
+        var v = new Vector3(1, 1, 1);
+        var v2 = vector.sumCopy(v);
+        expect(v2.x).toBe(2);
+        expect(v2.y).toBe(3);
+        expect(v2.z).toBe(4);
+        expect(v2).not.toEqual(vector);
+        expect(vector.x).toBe(1);
+        expect(vector.y).toBe(2);
+        expect(vector.z).toBe(3);
+      });
+
 });
