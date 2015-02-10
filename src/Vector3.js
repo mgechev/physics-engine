@@ -32,3 +32,7 @@ Vector3.prototype.multiply = function (n) {
   this.y *= n;
   this.z *= n;
 };
+
+Vector3.prototype.multiplyCopy = function (n) {
+  return new Vector3(this.x * n, this.y * n, this.z * n);
+};

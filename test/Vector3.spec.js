@@ -55,4 +55,18 @@ describe('Vector3', function () {
         expect(vector.y).toBe(4);
         expect(vector.z).toBe(6);
       });
+
+  it('should has method for multipllication the current vector ' +
+      'with scalar and return new vector', function () {
+        var vector = new Vector3(1, 2, 3);
+        expect(typeof vector.multiplyCopy).toBe('function');
+        var v2 = vector.multiplyCopy(2);
+        expect(v2.x).toBe(2);
+        expect(v2.y).toBe(4);
+        expect(v2.z).toBe(6);
+        expect(v2).not.toEqual(vector);
+        expect(vector.x).toBe(1);
+        expect(vector.y).toBe(2);
+        expect(vector.z).toBe(3);
+      });
 });
