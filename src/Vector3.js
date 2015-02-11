@@ -48,7 +48,7 @@ Vector3.prototype.sumCopy = function (v) {
 };
 
 Vector3.prototype.substract = function (v) {
-  this.x -= v.z;
+  this.x -= v.x;
   this.y -= v.y;
   this.z -= v.z;
 };

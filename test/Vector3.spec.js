@@ -96,4 +96,14 @@ describe('Vector3', function () {
         expect(vector.z).toBe(3);
       });
 
+  it('should has method substract, which substracts vector from ' +
+      'the current one', function () {
+        var vector = new Vector3(1, 2, 3);
+        expect(typeof vector.substract).toBe('function');
+        vector.substract(new Vector3(1, 2, 3));
+        expect(vector.x).toBe(0);
+        expect(vector.y).toBe(0);
+        expect(vector.z).toBe(0);
+      });
+
 });
