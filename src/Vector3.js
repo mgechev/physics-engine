@@ -46,3 +46,13 @@ Vector3.prototype.sum = function (v) {
 Vector3.prototype.sumCopy = function (v) {
   return new Vector3(this.x + v.x, this.y + v.y, this.z + v.z);
 };
+
+Vector3.prototype.substract = function (v) {
+  this.x -= v.z;
+  this.y -= v.y;
+  this.z -= v.z;
+};
+
+Vector3.prototype.substractCopy = function (v) {
+  return new Vector3(this.x - v.x, this.y - v.y, this.z - v.z);
+};
