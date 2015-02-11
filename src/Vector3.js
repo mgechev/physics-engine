@@ -27,33 +27,33 @@ Vector3.prototype.normalize = function () {
   this.z /= l;
 };
 
-Vector3.prototype.multiply = function (n) {
+Vector3.prototype.multiplyUpdate = function (n) {
   this.x *= n;
   this.y *= n;
   this.z *= n;
 };
 
-Vector3.prototype.multiplyCopy = function (n) {
+Vector3.prototype.multiply = function (n) {
   return new Vector3(this.x * n, this.y * n, this.z * n);
 };
 
-Vector3.prototype.sum = function (v) {
+Vector3.prototype.sumUpdate = function (v) {
   this.x += v.x;
   this.y += v.y;
   this.z += v.z;
 };
 
-Vector3.prototype.sumCopy = function (v) {
+Vector3.prototype.sum = function (v) {
   return new Vector3(this.x + v.x, this.y + v.y, this.z + v.z);
 };
 
-Vector3.prototype.substract = function (v) {
+Vector3.prototype.substractUpdate = function (v) {
   this.x -= v.x;
   this.y -= v.y;
   this.z -= v.z;
 };
 
-Vector3.prototype.substractCopy = function (v) {
+Vector3.prototype.substract = function (v) {
   return new Vector3(this.x - v.x, this.y - v.y, this.z - v.z);
 };
 
