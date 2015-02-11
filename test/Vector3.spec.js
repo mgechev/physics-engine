@@ -106,4 +106,17 @@ describe('Vector3', function () {
         expect(vector.z).toBe(0);
       });
 
+  it('should has method substractCopy, which substracts vector ' +
+      'from the current vector and returns a new vector',
+      function () {
+        var vector = new Vector3(1, 2, 3);
+        expect(typeof vector.substractCopy).toBe('function');
+        var v2 = vector.substractCopy(new Vector3(1, 2, 3));
+        expect(v2.x).toBe(0);
+        expect(v2.y).toBe(0);
+        expect(v2.z).toBe(0);
+        expect(vector.x).toBe(1);
+        expect(vector.y).toBe(2);
+        expect(vector.z).toBe(3);
+      });
 });
