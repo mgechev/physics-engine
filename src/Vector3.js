@@ -56,3 +56,9 @@ Vector3.prototype.substract = function (v) {
 Vector3.prototype.substractCopy = function (v) {
   return new Vector3(this.x - v.x, this.y - v.y, this.z - v.z);
 };
+
+Vector3.prototype.addScaledVector = function (v, s) {
+  this.x += v.x * s;
+  this.y += v.y * s;
+  this.z += v.z * s;
+};

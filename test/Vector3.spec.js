@@ -119,4 +119,14 @@ describe('Vector3', function () {
         expect(vector.y).toBe(2);
         expect(vector.z).toBe(3);
       });
+
+  it('should has method addScaledVector, which adds a scaled vector',
+      function () {
+        var v = new Vector3(1, 2, 3);
+        expect(typeof v.addScaledVector).toBe('function');
+        v.addScaledVector(new Vector3(2, 2, 2), 3);
+        expect(v.x).toBe(7);
+        expect(v.y).toBe(8);
+        expect(v.z).toBe(9);
+      });
 });
