@@ -155,4 +155,12 @@ describe('Vector3', function () {
         expect(v.y).toBe(4);
         expect(v.z).toBe(6);
       });
+
+  it('should has scalarProduct method, which returns the ' +
+      'scalar product of two vectors', function () {
+        var v1 = new Vector3(1, 2, 3);
+        expect(typeof v1.scalarProduct).toBe('function');
+        var v2 = new Vector3(1, 2, 3);
+        expect(v1.scalarProduct(v2)).toBe(14);
+      });
 });
