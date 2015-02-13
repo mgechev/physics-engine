@@ -83,3 +83,10 @@ Vector3.prototype.vectorProduct = function (v) {
       this.x * v.y - this.y * v.x
       );
 };
+
+Vector3.prototype.vectorProductUpdate = function (v) {
+  var product = this.vectorProduct(v);
+  this.x = product.x;
+  this.y = product.y;
+  this.z = product.z;
+};

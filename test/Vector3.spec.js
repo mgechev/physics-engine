@@ -174,4 +174,16 @@ describe('Vector3', function () {
         expect(v3.y).toBe(8);
         expect(v3.z).toBe(-4);
       });
+
+  it('should has vectorProductUpdate, which updates the ' +
+      'current vector with the vector product of two vectors',
+      function () {
+        var v1 = new Vector3(1, 2, 3);
+        var v2 = new Vector3(3, 2, 1);
+        expect(typeof v1.vectorProductUpdate).toBe('function');
+        v1.vectorProductUpdate(v2);
+        expect(v1.x).toBe(-4);
+        expect(v1.y).toBe(8);
+        expect(v1.z).toBe(-4);
+      });
 });
