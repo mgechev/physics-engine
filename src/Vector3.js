@@ -76,3 +76,10 @@ Vector3.prototype.componentProductUpdate = function (v) {
 Vector3.prototype.scalarProduct = function (v) {
   return this.x * v.x + this.y * v.y + this.z * v.z;
 };
+
+Vector3.prototype.vectorProduct = function (v) {
+  return new Vector3(this.y * v.z - this.z * v.y,
+      this.z * v.x - this.x * v.z,
+      this.x * v.y - this.y * v.x
+      );
+};

@@ -163,4 +163,15 @@ describe('Vector3', function () {
         var v2 = new Vector3(1, 2, 3);
         expect(v1.scalarProduct(v2)).toBe(14);
       });
+
+  it('should has vectorProduct method, which returns the ' +
+      'vector product of two vectors', function () {
+        var v1 = new Vector3(1, 2, 3);
+        var v2 = new Vector3(3, 2, 1);
+        expect(typeof v1.vectorProduct).toBe('function');
+        var v3 = v1.vectorProduct(v2);
+        expect(v3.x).toBe(-4);
+        expect(v3.y).toBe(8);
+        expect(v3.z).toBe(-4);
+      });
 });
