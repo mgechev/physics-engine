@@ -129,4 +129,22 @@ describe('Vector3', function () {
         expect(v.y).toBe(8);
         expect(v.z).toBe(9);
       });
+
+  it('should has componentProduct method, which multiply ' +
+      'given vector with new one and returns a third vector',
+      function () {
+        var v = new Vector3(1, 2, 3);
+        expect(typeof v.componentProduct).toBe('function');
+        var v2 = new Vector3(2, 3, 4);
+        var v3 = v.componentProduct(v2);
+        expect(v3.x).toBe(2);
+        expect(v3.y).toBe(6);
+        expect(v3.z).toBe(12);
+        expect(v.x).toBe(1);
+        expect(v.y).toBe(2);
+        expect(v.z).toBe(3);
+      });
+
+//  it('should has componentProductUpdate, which multiplies ' +
+//      'given vector annd
 });

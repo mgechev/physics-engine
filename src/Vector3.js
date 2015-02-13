@@ -62,3 +62,13 @@ Vector3.prototype.addScaledVector = function (v, s) {
   this.y += v.y * s;
   this.z += v.z * s;
 };
+
+Vector3.prototype.componentProduct = function (v) {
+  return new Vector3(this.x * v.x, this.y * v.y, this.z * v.z);
+};
+
+Vector3.prototype.componentProductUpdate = function (v) {
+  this.x *= v.x;
+  this.y *= v.y;
+  this.z *= v.z;
+};
