@@ -145,6 +145,14 @@ describe('Vector3', function () {
         expect(v.z).toBe(3);
       });
 
-//  it('should has componentProductUpdate, which multiplies ' +
-//      'given vector annd
+  it('should has componentProductUpdate, which multiplies ' +
+      'given vectors and updates the target one',
+      function () {
+        var v = new Vector3(1, 2, 3);
+        v.componentProductUpdate(new Vector3(2, 2, 2));
+        expect(typeof v.componentProductUpdate).toBe('function');
+        expect(v.x).toBe(2);
+        expect(v.y).toBe(4);
+        expect(v.z).toBe(6);
+      });
 });
