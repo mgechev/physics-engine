@@ -1,8 +1,9 @@
 'use strict';
 
-function Particle(position, velocity, acceleration, damping) {
-  this.position = position;
-  this.velocity = velocity;
-  this.acceleration = acceleration;
-  this.damping = damping || 0;
+function Particle(config) {
+  this.position = config.position;
+  this.velocity = config.velocity;
+  this.acceleration = config.acceleration;
+  this.damping = config.damping || 0;
+  this.inverseMass = config.inverseMass || Infinity;
 }
