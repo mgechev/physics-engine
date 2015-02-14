@@ -27,4 +27,17 @@ describe('Particle', function () {
       particle.mass = 4;
       expect(particle.inverseMass).toBe(0.25);
     });
+
+  it('should has a method integrate, which integrates ' +
+      'the particle for duration',
+      function () {
+        var particle = new Particle({
+          position: new Vector3(1, 1, 1),
+          velocity: new Vector3(2, 2, 2),
+          acceleration: new Vector3(1, 1, 1),
+          damping: 1,
+          mass: 2
+        });
+        expect(typeof particle.integrate).toBe('function');
+      });
 });
