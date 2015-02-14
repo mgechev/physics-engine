@@ -16,12 +16,12 @@ describe('Particle', function () {
         velocity: vel,
         acceleration: acc,
         damping: 2,
-        inverseMass: 2
+        mass: 2
       });
       expect(particle.position).toBe(pos);
       expect(particle.velocity).toBe(vel);
       expect(particle.acceleration).toBe(acc);
       expect(particle.damping).toBe(2);
-      expect(particle.inverseMass).toBe(2);
+      expect(particle.inverseMass).toBe(0.5);
     });
 });
