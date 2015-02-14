@@ -23,5 +23,8 @@ describe('Particle', function () {
       expect(particle.acceleration).toBe(acc);
       expect(particle.damping).toBe(2);
       expect(particle.inverseMass).toBe(0.5);
+      expect(particle.mass).toBe(2);
+      particle.mass = 4;
+      expect(particle.inverseMass).toBe(0.25);
     });
 });
