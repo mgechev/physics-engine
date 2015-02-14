@@ -1,3 +1,4 @@
+/* global Vector3 */
 'use strict';
 
 function Particle(config) {
@@ -15,3 +16,17 @@ function Particle(config) {
     }
   });
 }
+
+Particle.prototype.integrate = function (duration) {
+  // Move the particle
+  this.position.addScaledVector(this.velocity, duration);
+
+  // g = 9.8 m/s^2, in our case 10
+  var g = new Vector3(0, -10, 0);
+  this.acceleration.addScaledVector(g, this.inverseMass);
+
+  // Update the velocity based on the updated acceleration
+  this.velocity.addScaledVector(this.acceleration, duration);
+  // Update the velocity based on the damping
+  this.velocity.multiplyUpdate(Math.pow(this.damping, duration));
+};
